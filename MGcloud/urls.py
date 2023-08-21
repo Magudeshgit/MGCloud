@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('baton/', include('baton.urls')),
 
+    path('Home/', atv.Home),
     path('SignUp/', atv.Register),
     path('SignIn/', atv.SignIn),
     path('logout/', atv.logoutuser),

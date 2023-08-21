@@ -6,6 +6,8 @@ from django.core.mail import EmailMessage
 from .Auth import *
 from django.conf import settings
 # Create your views here.
+def Home(request):
+        return render(request, "Auth/index.html")
 def Register(request):
         form = RegisterForm()
         if request.method == "POST":
@@ -48,4 +50,4 @@ def SignIn(request):
         return render(request,'Auth/Signin.html')
 def logoutuser(request):
         logout(request)
-        return HttpResponseRedirect('/SignIn/')
+        return HttpResponseRedirect('/Home/')

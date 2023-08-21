@@ -16,7 +16,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 # print(os.path.join(BASE_DIR, 'UserFiles'))
 
-@login_required(login_url='SignIn/')
+@login_required(login_url='Home/')
 def Home(request):
 	print(request.META)
 	Upload = FileUpload()
